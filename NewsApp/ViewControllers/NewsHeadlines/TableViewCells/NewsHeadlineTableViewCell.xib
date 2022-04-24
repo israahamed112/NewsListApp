@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsHeadlineTableViewCell" id="KGk-i7-Jjw" customClass="NewsHeadlineTableViewCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMW-F5-HY9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsHeadLinePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="T88-f3-dWj">
+                                <rect key="frame" x="8" y="16.5" width="120" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="RwL-dp-kCp"/>
+                                    <constraint firstAttribute="width" constant="120" id="emH-8k-Hvp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News HeadLine" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-WY-6wz">
+                                <rect key="frame" x="136" y="16" width="124.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aw-KX-7ed">
+                                <rect key="frame" x="136" y="45.5" width="26" height="16"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqM-um-qZm">
+                                <rect key="frame" x="0.0" y="163" width="320" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="iT3-Z1-gkC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yqM-um-qZm" secondAttribute="trailing" id="0Iv-3P-AEn"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NRe-WY-6wz" secondAttribute="trailing" constant="8" id="5lR-Ph-nYh"/>
+                            <constraint firstItem="yqM-um-qZm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1Aw-KX-7ed" secondAttribute="bottom" constant="8" id="C5v-1K-2to"/>
+                            <constraint firstItem="NRe-WY-6wz" firstAttribute="leading" secondItem="T88-f3-dWj" secondAttribute="trailing" constant="8" id="F2p-Ut-5pb"/>
+                            <constraint firstItem="yqM-um-qZm" firstAttribute="leading" secondItem="BMW-F5-HY9" secondAttribute="leading" id="FCo-26-5Pw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Aw-KX-7ed" secondAttribute="trailing" constant="16" id="GtQ-UP-89T"/>
+                            <constraint firstItem="1Aw-KX-7ed" firstAttribute="top" secondItem="NRe-WY-6wz" secondAttribute="bottom" constant="8" id="LA7-nd-4un"/>
+                            <constraint firstItem="T88-f3-dWj" firstAttribute="centerY" secondItem="BMW-F5-HY9" secondAttribute="centerY" id="ONc-mG-aq3"/>
+                            <constraint firstItem="T88-f3-dWj" firstAttribute="leading" secondItem="BMW-F5-HY9" secondAttribute="leading" constant="8" id="Ocy-hi-oGx"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="T88-f3-dWj" secondAttribute="bottom" constant="13" id="TAs-0a-v3z"/>
+                            <constraint firstItem="1Aw-KX-7ed" firstAttribute="leading" secondItem="NRe-WY-6wz" secondAttribute="leading" id="U0F-7H-WKE"/>
+                            <constraint firstItem="NRe-WY-6wz" firstAttribute="top" secondItem="BMW-F5-HY9" secondAttribute="top" constant="16" id="X0f-Mx-PxP"/>
+                            <constraint firstItem="T88-f3-dWj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BMW-F5-HY9" secondAttribute="top" constant="15" id="eg3-Ug-SFd"/>
+                            <constraint firstAttribute="bottom" secondItem="yqM-um-qZm" secondAttribute="bottom" id="i82-v7-Ldx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BMW-F5-HY9" secondAttribute="trailing" id="1ka-9K-5fb"/>
+                    <constraint firstItem="BMW-F5-HY9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6TQ-Pb-xRq"/>
+                    <constraint firstAttribute="bottom" secondItem="BMW-F5-HY9" secondAttribute="bottom" id="iBk-6e-wq7"/>
+                    <constraint firstItem="BMW-F5-HY9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jjs-jT-Ur6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="headlineDateLabel" destination="1Aw-KX-7ed" id="Erd-Jj-zey"/>
+                <outlet property="headlineImageView" destination="T88-f3-dWj" id="Tw7-tz-Rfr"/>
+                <outlet property="headlineLabel" destination="NRe-WY-6wz" id="fXb-2L-3NJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="87.388392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="newsHeadLinePlaceHolder" width="351" height="190"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
