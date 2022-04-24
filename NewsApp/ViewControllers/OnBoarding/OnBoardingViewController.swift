@@ -56,6 +56,7 @@ class OnBoardingViewController: UIViewController {
         
     }
     
+    /// Adding confirmation alert for confirm user before navigating to the main screen
     func showConfirmationAlert() {
         let alert = UIAlertController(title: "Are you sure?", message: "By pressing continue, you can see your country, favortie category news", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler:  { [weak self] _ in

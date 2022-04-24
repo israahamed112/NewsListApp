@@ -23,7 +23,8 @@ class NewsHeadlineDetailsViewController: UIViewController {
         navigationBarSetup()
         initialSetup()
     }
-
+    
+    /// Setting screen data
     func initialSetup() {
         self.articleTitleLabel.text = articleModel?.title ?? ""
         self.descriptionLabel.text = articleModel?.articleDescription ?? ""

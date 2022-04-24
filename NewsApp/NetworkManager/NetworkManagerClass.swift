@@ -10,7 +10,6 @@ import RxSwift
 import RxAlamofire
 import RxCocoa
 import Alamofire
-import UIKit
 
 class NetworkManagerClass {
     
