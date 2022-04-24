@@ -8,16 +8,13 @@
 import UIKit
 
 class OnBoardingViewController: UIViewController {
-
+    
     @IBOutlet weak var countriesPickerView: UIPickerView!
     @IBOutlet weak var categoriesPickerView: UIPickerView!
     
     @IBOutlet weak var continueBtn: UIButton!
     var categoriesList: [String] = []
     var countriesList: [CountryModel] = []
-    
-    var selectedCategory = ""
-    var selectedCountry: CountryModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +33,7 @@ class OnBoardingViewController: UIViewController {
             UserDefaults.standard.set(countriesList[0].countryCode, forKey: "countryCode")
             UserDefaults.standard.set(categoriesList[0], forKey: "category")
         }
-
+        
     }
     
     func setDelegates() {
@@ -56,7 +53,7 @@ class OnBoardingViewController: UIViewController {
     
     @IBAction func continueBtnPressed(_ sender: Any) {
         showConfirmationAlert()
-
+        
     }
     
     func showConfirmationAlert() {
@@ -103,11 +100,11 @@ extension OnBoardingViewController: UIPickerViewDelegate, UIPickerViewDataSource
         let titleForRow  = "Not Found"
         if pickerView == countriesPickerView {
             return countriesList[row].countryName
-
+            
         } else if pickerView == categoriesPickerView {
             return categoriesList[row].capitalized
         }
         return titleForRow
     }
-        
+    
 }

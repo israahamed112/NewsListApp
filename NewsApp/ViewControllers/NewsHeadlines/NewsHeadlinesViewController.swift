@@ -105,15 +105,9 @@ class NewsHeadlinesViewController: UIViewController {
         } else {
             spinner.stopAnimating()
             if let data = UserDefaults.standard.value(forKey:"articles") as? Data {
-                do {
-                    let savedArticles = (try? PropertyListDecoder().decode(Array<Article>.self, from: data)) ?? []
-                    self.headlines = savedArticles
-                    self.newsHeadlinesTableView.reloadData()
-                    
-                } catch {
-                    showLoader()
-                    newsHeadlinesViewModel.getTopHeadlinedByCountry()
-                }
+                let savedArticles = (try? PropertyListDecoder().decode(Array<Article>.self, from: data)) ?? []
+                self.headlines = savedArticles
+                self.newsHeadlinesTableView.reloadData()
             } else {
                 showLoader()
                 newsHeadlinesViewModel.getTopHeadlinedByCountry()
