@@ -105,7 +105,7 @@ extension OnBoardingViewController: UIPickerViewDelegate, UIPickerViewDataSource
             return countriesList[row].countryName
 
         } else if pickerView == categoriesPickerView {
-            return categoriesList[row]
+            return categoriesList[row].capitalized
         }
         return titleForRow
     }
